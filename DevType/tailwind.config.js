@@ -3,6 +3,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"JetBrains Mono"', "monospace"],
+      },
       colors: {
         navy: "#0f172a",
         white: "#f8fafc",
