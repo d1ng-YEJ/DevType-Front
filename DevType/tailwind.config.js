@@ -14,6 +14,15 @@ module.exports = {
         skyblue: "#22d3ee",
         black: "#333d48",
       },
+      keyframes: {
+        blink: {
+          "0%, 100%": { opacity: 1 },
+          "50%": { opacity: 0 },
+        },
+      },
+      animation: {
+        blink: "blink 1s step-end infinite",
+      },
     },
   },
   plugins: [],
