@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"JetBrains Mono"', "monospace"],
+        sans: ['"Pretendard"', "sans-serif"],
+        jet: ['"JetBrains Mono"', "monospace"],
       },
       colors: {
         navy: "#0f172a",
