@@ -1,8 +1,8 @@
 function Copyright() {
   return (
-    <div className="text-white/50 font-medium text-[16px]">
+    <footer className="text-white/50 font-light text-[16px] fixed bottom-[48px] ">
       &copy; 2026. d1ng&YEJ All rights reserved.
-    </div>
+    </footer>
   );
 }
 export default Copyright;
