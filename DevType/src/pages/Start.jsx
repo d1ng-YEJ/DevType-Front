@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Logo from "../assets/Logo";
 import Copyright from "../components/Copyright";
-function Nav() {
-  <Link to="/home"></Link>;
-}
 function Start() {
+  const navigate = useNavigate();
+  
+  const Nav = () => {
+    navigate("/home");
+  };
   return (
     <div className="flex flex-col items-center justify-center min-h-screen mx-auto bg-navy">
       <Logo></Logo>
