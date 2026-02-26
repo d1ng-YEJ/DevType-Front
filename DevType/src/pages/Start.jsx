@@ -3,7 +3,7 @@ import Logo from "../assets/Logo";
 import Copyright from "../components/Copyright";
 function Start() {
   const navigate = useNavigate();
-  
+
   const Nav = () => {
     navigate("/home");
   };
