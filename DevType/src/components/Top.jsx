@@ -1,0 +1,32 @@
+function Top() {
+  return (
+    <div>
+      <div className="fixed top-[20px] left-[56px]">
+        <div className="font-jet text-skyblue font-medium text-[16px] mb-[12px]">
+          $analyze --github
+        </div>
+        <div className="flex">
+          <div className="font-jet text-white font-semibold text-[32px]">
+            DevType
+          </div>
+          <div className="text-yellow font-medium text-[32px] animate-blink">
+            |
+          </div>
+        </div>
+      </div>
+
+      <div className="relative">
+        <div className="absolute right-[216px] top-[48px] flex flex-col  gap-2">
+          <div className=" flex gap-[68px]">
+            <div className="text-white/70 font-light text-5">홈</div>
+            <div className="text-white/70 font-light text-5">유형 소개</div>
+          </div>
+          <div className="relative right-8 bg-skyblue w-20 h-1 rounded"></div>
+        </div>
+      </div>
+
+      <div className="fixed top-[120px] left-[24px] w-[1600px] h-[1px] bg-perple "></div>
+    </div>
+  );
+}
+export default Top;
