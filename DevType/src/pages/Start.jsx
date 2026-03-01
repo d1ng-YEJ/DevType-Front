@@ -18,7 +18,7 @@ function Start() {
       </div>
       <button
         onClick={Nav}
-        className="text-black bg-yellow font-bold text-[20px] px-[165px] py-[12px] rounded-lg mt-[28px] hover:bg-[#eb9400]"
+        className="hover:shadow-[0_1px_10px_0px_#eb9400] text-black bg-yellow font-bold text-[20px] px-[165px] py-[12px] rounded-lg mt-[28px] transition-all duration-500 ease-in-out hover:translate-y-[-4px] "
       >
         시작하기
       </button>
