@@ -28,7 +28,7 @@ function Home() {
               ></img>
             </div>
           </div>
-          <button className="text-black bg-yellow font-bold text-[20px] px-[196px] py-3 rounded-lg mt-[28px] hover:bg-[#eb9400]">
+          <button className="hover:shadow-[0_1px_10px_0px_#eb9400] text-black bg-yellow font-bold text-[20px] px-[196px] py-3 rounded-lg mt-[28px] transition-all duration-500 ease-in-out hover:translate-y-[-4px]">
             AI 분석 시작하기
           </button>
           <Copyright></Copyright>
