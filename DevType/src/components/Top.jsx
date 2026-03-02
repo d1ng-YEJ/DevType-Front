@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
 function Top() {
+  const navigate = useNavigate();
+  function Nav() {
+    navigate("/type");
+  }
   return (
     <div className="w-full">
       <div className="max-w-[1920px]  mx-auto">
@@ -19,7 +24,10 @@ function Top() {
             <div className="flex flex-col gap-2">
               <div className="flex  gap-[68px]">
                 <div className="text-white/70 font-light text-[16px]">홈</div>
-                <div className="text-white/70 font-light text-[16px]">
+                <div
+                  onClick={Nav}
+                  className="text-white/70 font-light text-[16px] hover:cursor-pointer"
+                >
                   유형 소개
                 </div>
               </div>
