@@ -3,7 +3,7 @@ import Icon from "../assets/Vector.svg";
 function Home() {
   return (
     <div className="w-full h-full bg-navy">
-      <div className="max-w-[1920px] mx-auto ">
+      <div className="max-w-[1920px] mx-auto pt-[120px] ">
         <div className="flex flex-col justify-center items-center h-80 pt-[160px]">
           <div className="font-bold text-3xl text-white/80 pb-[72px]">
             당신의 개발자 유형은?
