@@ -1,9 +1,17 @@
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 function Top() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [moving, setMoving] = useState(false);
-  const handleClick = () => {
+  useEffect(() => {
+    if (location.pathname === "/type") {
+      setMoving(true);
+    } else {
+      setMoving(false);
+    }
+  }, [location.pathname]);
+  const handleClickType = () => {
     setMoving(true);
     setTimeout(() => {
       navigate("/type");
@@ -29,9 +37,14 @@ function Top() {
 
             <div className="flex flex-col gap-2">
               <div className="flex  gap-[68px]">
-                <div className="text-white/70 font-light text-[16px]">홈</div>
                 <div
-                  onClick={handleClick}
+                  onClick={() => navigate("/home")}
+                  className="text-white/70 font-light text-[16px]"
+                >
+                  홈
+                </div>
+                <div
+                  onClick={handleClickType}
                   className="text-white/70 font-light text-[16px] hover:cursor-pointer"
                 >
                   유형 소개
