@@ -17,9 +17,7 @@ function Top() {
     if (location.pathname === "/type") return;
     setAnimate(true);
     setMoving(true);
-    setTimeout(() => {
-      navigate("/type");
-    }, 500);
+    navigate("/type");
   };
 
   return (
