@@ -6,7 +6,7 @@ import Top from "./components/Top";
 import Copyright from "./components/Copyright";
 function Layout() {
   return (
-    <div className="flex flex-col bg-navy min-h-screen">
+    <div className="flex flex-col items-center bg-navy min-h-screen">
       <Top></Top>
       <main className="flex-1">
         <Outlet></Outlet>
