@@ -39,7 +39,7 @@ function Top() {
               <div className="flex  gap-[68px]">
                 <div
                   onClick={() => navigate("/home")}
-                  className="text-white/70 font-light text-[16px]"
+                  className="text-white/70 font-light text-[16px] hover:cursor-pointer"
                 >
                   홈
                 </div>
