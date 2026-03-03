@@ -1,9 +1,23 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 function Top() {
   const navigate = useNavigate();
-  function Nav() {
-    navigate("/type");
-  }
+  const location = useLocation();
+  const [moving, setMoving] = useState(false);
+  useEffect(() => {
+    if (location.pathname === "/type") {
+      setMoving(true);
+    } else {
+      setMoving(false);
+    }
+  }, [location.pathname]);
+  const handleClickType = () => {
+    setMoving(true);
+    setTimeout(() => {
+      navigate("/type");
+    }, 500);
+  };
+
   return (
     <div className="w-full">
       <div className="max-w-[1920px]  mx-auto">
@@ -23,15 +37,22 @@ function Top() {
 
             <div className="flex flex-col gap-2">
               <div className="flex  gap-[68px]">
-                <div className="text-white/70 font-light text-[16px]">홈</div>
                 <div
-                  onClick={Nav}
+                  onClick={() => navigate("/home")}
+                  className="text-white/70 font-light text-[16px] hover:cursor-pointer"
+                >
+                  홈
+                </div>
+                <div
+                  onClick={handleClickType}
                   className="text-white/70 font-light text-[16px] hover:cursor-pointer"
                 >
                   유형 소개
                 </div>
               </div>
-              <div className="relative right-8 bg-skyblue w-20 h-[2px] rounded"></div>
+              <div
+                className={`relative right-8 bg-skyblue w-20 h-[2px] rounded duration-500 ease-in-out transition-all ${moving ? "translate-x-[102px]" : "trnaslate-x-0"}`}
+              ></div>
             </div>
           </div>
         </div>
