@@ -3,15 +3,19 @@ import { useState, useEffect } from "react";
 function Top() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [moving, setMoving] = useState(false);
+  const [moving, setMoving] = useState(location.pathname === "/type");
+  const [animate, setAnimate] = useState(false);
   useEffect(() => {
     if (location.pathname === "/type") {
       setMoving(true);
     } else {
       setMoving(false);
+      setAnimate(false);
     }
   }, [location.pathname]);
   const handleClickType = () => {
+    if (location.pathname === "/type") return;
+    setAnimate(true);
     setMoving(true);
     setTimeout(() => {
       navigate("/type");
