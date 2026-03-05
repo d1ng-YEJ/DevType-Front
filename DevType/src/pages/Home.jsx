@@ -38,7 +38,12 @@ function Home() {
           </button>
         </div>
       </div>
-      <Result isOpen={open} onCancel={() => setOpen(false)}></Result>
+      <Result
+        isOpen={open}
+        onCancel={() => setOpen(false)}
+        type="완벽주의자 리팩토러"
+        desc="ㅁ;ㄴ이람ㄴ;애룸ㄴㅇ래ㅑㅁ넝ㄹ;ㅣ"
+      ></Result>
     </div>
   );
 }
