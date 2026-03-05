@@ -27,8 +27,7 @@ export default function Result({ isOpen, onCancel, type, desc }) {
             </div>
           </div>
           <div className="bg-[#142142] border-perple border-[1px] rounded-2xl w-[448px] h-[328px] text-white font-medium text-lg pt-5 px-5 break-words whitespace-normal">
-            이유이유이ㅠㅇㄴ;리ㅏㅁ늉리ㅏㅁ눙;ㅐㅁㄴ울;ㅣㅁ나얼;ㅁㄴㅇ룸ㄴ이ㅏ럼ㄴ앨2ㅜ;ㄷ리;ㅏㄴㅁㅇㄹ'
-            ㅁ;ㄴ이ㅏ룸; dfinweoifna'epiofja'wp
+            {desc}
           </div>
         </div>
       </div>
