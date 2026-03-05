@@ -1,6 +1,10 @@
+import { useState } from "react";
 import Top from "../components/Top";
 import Icon from "../assets/Vector.svg";
+import Result from "../components/Result";
+import React from "react";
 function Home() {
+  const [open, setOpen] = useState(false);
   return (
     <div className="w-full h-full bg-navy">
       <div className="max-w-[1920px] mx-auto pt-[120px] ">
@@ -26,11 +30,15 @@ function Home() {
               ></img>
             </div>
           </div>
-          <button className="hover:shadow-[0_1px_10px_0px_#eb9400] text-black bg-yellow font-bold text-[20px] px-[196px] py-3 rounded-lg mt-[28px] transition-all duration-500 ease-in-out hover:translate-y-[-4px]">
+          <button
+            onClick={() => setOpen(true)}
+            className="hover:shadow-[0_1px_10px_0px_#eb9400] text-black bg-yellow font-bold text-[20px] px-[196px] py-3 rounded-lg mt-[28px] transition-all duration-500 ease-in-out hover:translate-y-[-4px]"
+          >
             AI 분석 시작하기
           </button>
         </div>
       </div>
+      <Result isOpen={open} onCancel={() => setOpen(false)}></Result>
     </div>
   );
 }
