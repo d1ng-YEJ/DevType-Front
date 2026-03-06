@@ -1,10 +1,13 @@
 import Xmark from "../assets/Xmark.svg";
 export default function Result({ isOpen, onCancel, type, desc }) {
-  if (!isOpen) return null;
   return (
     <div
       onClick={onCancel}
-      className="fixed inset-0 bg-[#000000]/50 flex items-center justify-center"
+      className={`fixed inset-0 bg-[#000000]/50 flex items-center justify-center transition-all duration-500 ease-in-out ${
+        isOpen
+          ? "translate-y-[-4px] opacity-100"
+          : "translate-y-0 opacity-0 pointer-events-none"
+      }`}
     >
       <div
         className=" relative bg-navy w-[560px] h-[620px] border-perple border-[1px] rounded-2xl mt-20"
