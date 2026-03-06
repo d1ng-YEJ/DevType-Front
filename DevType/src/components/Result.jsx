@@ -17,7 +17,7 @@ export default function Result({ isOpen, onCancel, type, desc }) {
           onClick={onCancel}
           src={Xmark}
           alt="close"
-          className="absolute left-[504px] top-7"
+          className="absolute left-[504px] top-7 hover:cursor-pointer"
         ></img>
         <div className="flex  flex-col pt-20  gap-9 justify-center items-center">
           <div className="flex flex-col gap-2">
