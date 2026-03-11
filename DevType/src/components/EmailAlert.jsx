@@ -1,10 +1,17 @@
 import Xmark from "../assets/AlertXmark.svg";
 import Alert from "../assets/Alert.svg";
-function EmailAlert() {
+function EmailAlert({ showEmailAlert, onCancel }) {
   return (
-    <div className="fixed top-14 right-12 w-[360px] h-20 bg-[#142142] border-2 border-red-500 rounded-xl">
-      {" "}
+    <div
+      className={`fixed top-[80px]  right-0
+         w-[360px] h-20 bg-[#142142] border-2 border-red-500 rounded-xl ${
+           showEmailAlert
+             ? "transition-animation duration-300 ease-in-out translate-x-[-40px] opacity-100"
+             : "translate-x-0 opacity-0"
+         }`}
+    >
       <img
+        onClick={onCancel}
         src={Xmark}
         alt="Xmark"
         className="pl-[328px] pt-2 hover:cursor-pointer"
