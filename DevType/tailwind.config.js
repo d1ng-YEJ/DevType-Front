@@ -20,9 +20,16 @@ module.exports = {
           "0%, 100%": { opacity: 1 },
           "50%": { opacity: 0 },
         },
+        shake: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "25%": { transform: "translateY(2px)" },
+          "50%": { transform: "translateY(-2px)" },
+          "75%": { transform: "translateY(2px)" },
+        },
       },
       animation: {
         blink: "blink 1s step-end infinite",
+        shake: "shake 0.1s 0s 2",
       },
     },
   },
