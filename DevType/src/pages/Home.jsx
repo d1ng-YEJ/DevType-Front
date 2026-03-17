@@ -81,14 +81,16 @@ function Home() {
                 : "Github 프로필 URL을 입력하세요"}
             </div>
 
-            <div className="relative">
+            <div
+              className={`relative ${showEmailAlert ? "animate-shake" : ""}`}
+            >
               <input
                 type="url"
                 value={githubUrl} // 값 연결
                 onChange={(e) => setGithubUrl(e.target.value)} // 변경 이벤트 연결
                 disabled={isAnalyzing}
                 maxLength={58}
-                className={`w-[524px] font-jet text-[16px] text-white/50 font-medium outline-none border-perple border-[1px] rounded-lg bg-[#142142] py-4 pl-5 pr-8 placeholder:font-jet focus:border-skyblue focus:shadow-[0_1px_10px_0px_#22d3ee] transition-all duration-500 ${isAnalyzing ? "opacity-50 cursor-not-allowed" : ""}`}
+                className={`w-[524px] font-jet text-[16px] text-white/50 font-medium outline-none border-perple border-[1px] rounded-lg bg-[#142142] py-4 pl-5 pr-8 placeholder:font-jet focus:border-skyblue focus:shadow-[0_1px_10px_0px_#22d3ee] transition-all duration-500 ${isAnalyzing ? "opacity-50 cursor-not-allowed" : ""}  ${showEmailAlert ? "border-red-500 border-[1px]" : ""}`}
                 placeholder="https://github.com/username"
               />
               <img
