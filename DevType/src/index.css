@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 배경이 꽉 차게 보이도록 추가 */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
