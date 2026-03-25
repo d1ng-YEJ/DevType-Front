@@ -30,7 +30,7 @@ function Top() {
           <div className="flex justify-between items-start ">
             <div className="flex">
               <div className="font-jet text-white font-semibold text-[32px]">
-                DevType
+                DPTI
               </div>
               <div className="text-yellow font-medium text-[32px] animate-blink">
                 |
