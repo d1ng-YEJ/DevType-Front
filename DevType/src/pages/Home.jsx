@@ -31,7 +31,7 @@ function Home() {
     setLoadingStep(0);
 
     try {
-      const response = await axios.post("http://your-backend-api.com/analyze", {
+      const response = await axios.post("http://gsmsv-1.yujun.kr:20273/", {
         link: githubUrl,
       });
 
@@ -43,7 +43,7 @@ function Home() {
       setIsAnalyzing(false);
       setOpen(true);
     } catch (error) {
-      console.error(error);
+      console.log(error);
       alert("분석 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
       setIsAnalyzing(false);
     }
