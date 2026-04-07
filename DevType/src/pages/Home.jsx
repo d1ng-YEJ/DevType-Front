@@ -31,9 +31,12 @@ function Home() {
     setLoadingStep(0);
 
     try {
-      const response = await axios.post("http://gsmsv-1.yujun.kr:20273/", {
-        link: githubUrl,
-      });
+      const response = await axios.post(
+        "http://gsmsv-1.yujun.kr:20273/api/dpti",
+        {
+          link: githubUrl,
+        },
+      );
 
       setResultData({
         type: response.data.word,
@@ -78,7 +81,7 @@ function Home() {
               &gt;{" "}
               {isAnalyzing
                 ? LOADING_STEPS[loadingStep]
-                : "Github 프로필 URL을 입력하세요"}
+                : "본인의 Github Repository URL을 입력하세요."}
             </div>
 
             <div
@@ -91,7 +94,7 @@ function Home() {
                 disabled={isAnalyzing}
                 maxLength={58}
                 className={`w-[524px] font-jet text-[16px] text-white/50 font-medium outline-none border-perple border-[1px] rounded-lg bg-[#142142] py-4 pl-5 pr-8 placeholder:font-jet focus:border-skyblue focus:shadow-[0_1px_10px_0px_#22d3ee] transition-all duration-500 ${isAnalyzing ? "opacity-50 cursor-not-allowed" : ""}  ${showEmailAlert ? "border-red-500 border-[1px]" : ""}`}
-                placeholder="https://github.com/username"
+                placeholder="https://github.com/username/repository"
               />
               <img
                 className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none"

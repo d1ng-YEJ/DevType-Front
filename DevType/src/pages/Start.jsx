@@ -14,7 +14,7 @@ function Start() {
         개발자 전용 개발 성향 테스트
       </h2>
       <div className="text-white/50 font-light text-[16px] mt-[135px]">
-        Github URL을 입력하여 본인이 어떤 개발자인지 알아보세요!
+        Github Repository URL을 입력하여 본인이 어떤 개발자인지 알아보세요!
       </div>
       <button
         onClick={Nav}
