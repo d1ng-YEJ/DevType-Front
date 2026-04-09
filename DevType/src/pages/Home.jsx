@@ -32,7 +32,7 @@ function Home() {
 
     try {
       const response = await axios.post(
-        "http://gsmsv-1.yujun.kr:20273/api/dpti",
+        "https://port-0-dpti-mnrd2qpqa186e4a2.sel3.cloudtype.app/api/dpti",
         {
           link: githubUrl,
         },
