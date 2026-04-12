@@ -1,5 +1,5 @@
 import Xmark from "../assets/Xmark.svg";
-export default function Result({ isOpen, onCancel, word, because }) {
+export default function Result({ isOpen, onCancel, type, desc }) {
   return (
     <div
       onClick={onCancel}
@@ -23,14 +23,14 @@ export default function Result({ isOpen, onCancel, word, because }) {
           <div className="flex flex-col gap-2">
             <div className="text-white font-bold text-3xl">당신은</div>
             <div className="flex gap-2">
-              <div className="text-skyblue font-bold text-[44px]">{word}</div>
+              <div className="text-skyblue font-bold text-[44px]">{type}</div>
               <div className="text-white font-bold text-3xl relative top-5">
                 입니다!
               </div>
             </div>
           </div>
           <div className="bg-[#142142] border-perple border-[1px] rounded-2xl w-[448px] h-[328px] text-white font-medium text-lg pt-5 px-5 break-words whitespace-normal">
-            {because}
+            {desc}
           </div>
         </div>
       </div>
