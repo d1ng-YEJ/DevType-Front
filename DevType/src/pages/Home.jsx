@@ -42,7 +42,9 @@ function Home() {
         type: response.data.word,
         desc: response.data.because,
       });
-
+      console.log(resultData.type);
+      console.log(resultData.desc);
+      console.log(response.data);
       setIsAnalyzing(false);
       setOpen(true);
     } catch (error) {
