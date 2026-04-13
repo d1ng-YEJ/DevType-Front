@@ -39,7 +39,7 @@ function Home() {
       );
 
       setResultData({
-        type: response.data.word,
+        type: response.data.devType,
         desc: response.data.because,
       });
       console.log(resultData.type);
