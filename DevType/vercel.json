@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "http://ssh.gsmsv.site:25112/:path*"
+      "destination": "http://ssh.gsmsv.site:25112/api/:path*"
     },
     {
       "source": "/(.*)",
