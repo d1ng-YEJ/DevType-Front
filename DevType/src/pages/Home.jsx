@@ -31,7 +31,7 @@ function Home() {
     setLoadingStep(0);
 
     try {
-      const response = await axios.post("http://ssh.gsmsv.site:25112/", {
+      const response = await axios.post("/api/dpti", {
         link: githubUrl,
       });
 
